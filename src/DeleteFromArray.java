@@ -2,18 +2,24 @@ public class DeleteFromArray {
     public static void main(String[] args) {
 
         int[] array = new int[]{2, 4, 3, 7, 3, 6, 4, 3, 5, 3};
-        int[] arrayTest = new int[array.length];
+//        int[] array = new int[]{2, 4, 3, 7, 9, 9, 3, 6, 4, 3, 5, 3, 9, 9, 9, 9};
+        int[] arrayResult = new int[array.length];
         int numberForDelete = 3;
-        for (int i = 0, j = 0; i < array.length - 1; i++, j++) {
+//        int numberForDelete = 9;
+        int indexArrayResult = 0;
+
+        for (int i = indexArrayResult; i < array.length; i++) {
 
             if (array[i] == numberForDelete) {
-                i++;
+
+                continue;
             }
-            arrayTest[j] = array[i];
+            arrayResult[indexArrayResult] = array[i];
+            indexArrayResult++;
         }
 
-        for (int i = 0; i < arrayTest.length; i++) {
-            array[i] = arrayTest[i];
+        for (int k = 0; k < arrayResult.length; k++) {
+            array[k] = arrayResult[k];
         }
 
         printResult(array);
