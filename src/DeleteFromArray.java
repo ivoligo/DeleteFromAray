@@ -3,7 +3,7 @@ public class DeleteFromArray {
 
         int[] array = new int[]{2, 4, 3, 7, 3, 6, 4, 3, 5, 3};
 //        int[] array = new int[]{2, 4, 3, 7, 9, 9, 3, 6, 4, 3, 5, 3, 9, 9, 9, 9};
-        int[] arrayResult = new int[array.length];
+        int[] arrayTemp = new int[array.length];
         int numberForDelete = 3;
 //        int numberForDelete = 9;
         int indexArrayResult = 0;
@@ -14,17 +14,18 @@ public class DeleteFromArray {
 
                 continue;
             }
-            arrayResult[indexArrayResult] = array[i];
+            arrayTemp[indexArrayResult] = array[i];
             indexArrayResult++;
         }
 
-        copyArray(arrayResult, array);
+        copyArray(arrayTemp, array);
         printResult(array);
     }
 
-    private static void copyArray(int[] arrayResult, int[] array) {
-        for (int k = 0; k < arrayResult.length; k++) {
-            array[k] = arrayResult[k];
+    private static void copyArray(int[] arrayTemp, int[] array) {
+
+        for (int k = 0; k < arrayTemp.length; k++) {
+            array[k] = arrayTemp[k];
         }
     }
 
