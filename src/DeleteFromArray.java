@@ -18,11 +18,14 @@ public class DeleteFromArray {
             indexArrayResult++;
         }
 
+        copyArray(arrayResult, array);
+        printResult(array);
+    }
+
+    private static void copyArray(int[] arrayResult, int[] array) {
         for (int k = 0; k < arrayResult.length; k++) {
             array[k] = arrayResult[k];
         }
-
-        printResult(array);
     }
 
     private static void printResult(int[] array) {
